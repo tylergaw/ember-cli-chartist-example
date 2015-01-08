@@ -4,16 +4,20 @@ export default Ember.Route.extend({
   model: function () {
     return {
       chartOpts: {
+        showArea: true,
+        fullWidth: true,
+        // showLine: false,
+        low: 0,
         // Don't draw the line chart points
-        showPoint: false,
+        // showPoint: false,
         // Disable line smoothing
-        lineSmooth: false,
+        // lineSmooth: false,
         // X-Axis specific configuration
         axisX: {
           // We can disable the grid for this axis
           showGrid: false,
           // and also don't show the label
-          showLabel: false
+          // showLabel: false
         },
         // Y-Axis specific configuration
         axisY: {
@@ -22,9 +26,9 @@ export default Ember.Route.extend({
           // The label interpolation function enables you to modify the values
           // used for the labels on each axis. Here we are converting the
           // values into million pound.
-          labelInterpolationFnc: function(value) {
-            return '$' + value + 'm';
-          }
+          // labelInterpolationFnc: function(value) {
+          //   return '$' + value + 'm';
+          // }
         }
       },
       lineChartData: {
@@ -37,9 +41,9 @@ export default Ember.Route.extend({
       },
 
       pieChartOpts: {
-        labelInterpolationFnc: function(value) {
-          return value[0];
-        }
+        // labelInterpolationFnc: function(value) {
+        //   return value + 'fish';
+        // }
       },
 
       pieChartData: {
