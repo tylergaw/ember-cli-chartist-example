@@ -34,6 +34,17 @@ export default Ember.Route.extend({
           [3, 2, 9, 5, 4, 6],
           [2, 1, -3, -4, -2, 0]
         ]
+      },
+
+      pieChartOpts: {
+        labelInterpolationFnc: function(value) {
+          return value[0];
+        }
+      },
+
+      pieChartData: {
+        labels: ['Bananas', 'Apples', 'Grapes'],
+        series: [20, 15, 40]
       }
     };
   }
